@@ -113,3 +113,31 @@ FROM tecnicos;
 SELECT nombre 
 FROM tecnicos 
 WHERE id NOT IN (SELECT tecnico_id FROM reparaciones);
+
+/*1. INSERT (Insertar datos)
+INSERT INTO nombre_tabla (columna1, columna2, columna3)
+VALUES ('valor1', 123, 'valor3');
+
+2. SELECT / VISTA (Consultar datos y Crear una Vista)
+
+SELECT columna1, columna2 
+FROM nombre_tabla 
+WHERE condicion = 'valor';
+
+CREATE VIEW vista_nombre AS
+SELECT columna1, columna2
+FROM nombre_tabla
+WHERE condicion = 'valor';
+
+3. UPDATE (Actualizar datos)
+
+UPDATE nombre_tabla
+SET columna1 = 'nuevo_valor', columna2 = 456
+WHERE id_tabla = 1;
+
+4. DELETE (Eliminar datos)
+
+DELETE FROM nombre_tabla
+WHERE id_tabla = 1;
+*/ 
+

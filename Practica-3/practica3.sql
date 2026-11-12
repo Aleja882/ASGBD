@@ -59,3 +59,4 @@ SHOW GRANTS FOR 'auditor_externo'@'%';
 
 -- 5.3. Análisis de comportamiento del CHECK OPTION:
 -- Si se elimina la cláusula WITH CHECK OPTION, se permite la inserción de registros cuyos  valores queden fuera del filtro
+

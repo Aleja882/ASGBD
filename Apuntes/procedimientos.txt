@@ -1,0 +1,35 @@
+Procedimientos: programas cmpuestos por un conjunto de sentencias SQL agrupadas para realizar una tarea. 
+    Estos se almacenan dentro del SGBD y esta compilado.Estructura:
+    Create procedure NombreProcedimiento([parametro1d[...]])
+    [caracteristicas]
+    BEGIN 
+        cuerpo_del_procedimiento
+    END
+
+1. Use ciclos_database (Use nombre selecciona la base de datos para almacenarlo)
+2. DELIMITER $ (indica que el delimitador no es ; es el simbolo que pongamos)
+3. CREATE PROCEDURE obtener fecha() (definicion del procedimiento)
+   BEGIN
+    SELECT curdate() as fecha actual;
+   END $
+4. DELIMITER; (volvemos a ponerno en la normalidad con ;)
+
+Variable: Algo que puede cambiar y vive solo en las instrucciones especificas, en nuestro caso en un procedimiento.
+
+Si las tenemos que crear, de forma local
+
+DECLARE nombreVariable tipo; nombre_juegos Varchar(50)
+
+SET: 
+SET variable=25;
+
+CREATE PROCEDURE obtenerEmpleadoMarketing()
+BEGIN 
+    DECLARE nombreMarketing varchar(20)
+    SET nombreMarketing = 'MKT';
+    SELECT*FROM empleados WHERE dpto= nombreMarketing;
+END;
+
+Variables de usuario:
+permiten almacenar un valos y hacer referencia a el son especificas de la conexion por lo que otrs clientes no podran usarlas.
+
